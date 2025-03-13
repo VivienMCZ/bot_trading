@@ -1,6 +1,14 @@
+import sys
+import os
+import ccxt
+
+# Ajouter le répertoire 'src' au chemin d'importation
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+
+
 from utils import create_binance_connection, fetch_current_price
 from strategy import create_trading_signal, calculate_moving_average
-from data_loader import load_historical_data
+from data.data_loader import load_historical_data
 from config_loader import load_config
 
 def main():
@@ -26,12 +34,23 @@ def main():
     # Prendre une décision de trading
     if signal == 1:
         print("Signal d'achat détecté. Passer un ordre d'achat.")
-        # Exemple : passer un ordre d'achat
-        # exchange.create_market_buy_order('BTC/USDT', quantity)
+        try:
+            # Passer un ordre d'achat
+            quantity = 0.01  # Remplacer par la quantité d'achat que tu souhaites
+            order = exchange.create_market_buy_order('BTC/USDT', quantity)
+            print(f"Ordre d'achat passé avec succès : {order}")
+        except ccxt.BaseError as e:
+            print(f"Erreur lors de la passation de l'ordre d'achat : {str(e)}")
+        
     elif signal == -1:
         print("Signal de vente détecté. Passer un ordre de vente.")
-        # Exemple : passer un ordre de vente
-        # exchange.create_market_sell_order('BTC/USDT', quantity)
+        try:
+            # Passer un ordre de vente
+            quantity = 0.01  # Remplacer par la quantité de vente que tu souhaites
+            order = exchange.create_market_sell_order('BTC/USDT', quantity)
+            print(f"Ordre de vente passé avec succès : {order}")
+        except ccxt.BaseError as e:
+            print(f"Erreur lors de la passation de l'ordre de vente : {str(e)}")
     else:
         print("Aucun signal de trading.")
 
