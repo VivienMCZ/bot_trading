@@ -1,0 +1,8 @@
+{
+    "symbol": "BTC/USDT",             
+    "stop_loss_percentage": 0.02,     
+    "take_profit_percentage": 0.05,   
+    "trading_volume": 0.01,           
+    "timeframe": "1h" 
+  }
+  
