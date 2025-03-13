@@ -93,7 +93,7 @@ Le bot affichera des informations sur la configuration actuelle, le prix actuel 
 
 ## Auteurs
 
-- Vivien M. (votre nom ici)
+- Vivien M. 
 
 ## License
 
