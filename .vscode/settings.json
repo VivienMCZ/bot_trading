@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
-        "./src/trading_bot"
+        "./src/trading_bot",
+        "./src/data"
     ]
 }
