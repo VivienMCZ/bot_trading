@@ -3,6 +3,8 @@
 
 Ce projet est un bot de trading automatisé utilisant l'API Binance pour effectuer des transactions de trading sur des paires de crypto-monnaies. Le bot analyse les données historiques, applique des stratégies de trading et prend des décisions d'achat ou de vente en fonction des signaux générés.
 
+Créé avec l'aide de Chat GPT pour explorer Python.
+
 ## Fonctionnalités
 
 - Connexion à l'API Binance pour récupérer les données de marché en temps réel.
