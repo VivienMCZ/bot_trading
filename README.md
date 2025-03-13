@@ -22,69 +22,45 @@ Avant de commencer, assurez-vous d'avoir installé les dépendances nécessaires
    cd bot_trading
 Créez un environnement virtuel (recommandé) :
 
-bash
-Copier
-Modifier
-python -m venv venv
-source venv/bin/activate  # Sur macOS/Linux
-venv\Scripts\activate     # Sur Windows
-Installez les dépendances :
+```bash
+    python -m venv venv
+    source venv/bin/activate  # Sur macOS/Linux
+    venv\Scripts\activate     # Sur Windows
+    Installez les dépendances :
 
-bash
-Copier
-Modifier
-pip install -r requirements.txt
-Créez un fichier .env à la racine de votre projet avec vos clés API Binance :
+```bash
+    pip install -r requirements.txt
+    Créez un fichier .env à la racine de votre projet avec vos clés API Binance :
 
-ini
-Copier
-Modifier
-BINANCE_API_KEY=VotreAPIKey
-BINANCE_API_SECRET=VotreAPISecret
+    BINANCE_API_KEY=VotreAPIKey
+    BINANCE_API_SECRET=VotreAPISecret
+
 Utilisation
 Exécutez le bot pour commencer le trading :
-bash
-Copier
-Modifier
-python src/trading_bot/bot.py
-Structure du projet
-bash
-Copier
-Modifier
-vivienmcz-bot_trading/
-    ├── README.md               # Documentation du projet
-    ├── requirements.txt        # Liste des dépendances
-    ├── .env                    # Clés API Binance (ne pas versionner)
-    ├── configs/
-    │   └── config.json         # Configuration du bot (paramètres de trading)
-    └── src/
-        ├── data/
-        │   └── data_loader.py  # Chargement des données historiques
-        └── trading_bot/
-            ├── bot.py         # Script principal pour exécuter le bot
-            ├── config_loader.py # Chargement de la configuration
-            ├── strategy.py     # Stratégies de trading (indicateurs, signaux)
-            └── utils.py        # Utilitaires divers (connexion Binance, etc.)
-Auteurs
-Vivien M. (votre nom ici)
-License
-Ce projet est sous la licence MIT.
+```bash
+    python src/trading_bot/bot.py
+    Structure du projet
+```
 
-makefile
-Copier
-Modifier
+```bash
 
-### 2. `requirements.txt`
+    vivienmcz-bot_trading/
+        ├── README.md               # Documentation du projet
+        ├── requirements.txt        # Liste des dépendances
+        ├── .env                    # Clés API Binance (ne pas versionner)
+        ├── configs/
+        │   └── config.json         # Configuration du bot (paramètres de trading)
+        └── src/
+            ├── data/
+            │   └── data_loader.py  # Chargement des données historiques
+            └── trading_bot/
+                ├── bot.py         # Script principal pour exécuter le bot
+                ├── config_loader.py # Chargement de la configuration
+                ├── strategy.py     # Stratégies de trading (indicateurs, signaux)
+                └── utils.py        # Utilitaires divers (connexion Binance, etc.)
+```
+    Auteurs
+    Vivien M. (votre nom ici)
 
-Voici une liste des bibliothèques que tu pourrais utiliser dans ce projet. Assure-toi de les ajuster en fonction de ton code et de tes besoins.
-
-```text
-ccxt==3.0.54
-pandas==1.5.3
-python-dotenv==0.21.0
-pandas-ta==0.3.14
-Explication des dépendances :
-ccxt : Une bibliothèque permettant de se connecter à l'API de Binance (et d'autres plateformes de trading) pour récupérer des informations de marché et passer des ordres.
-pandas : Bibliothèque pour la manipulation des données, idéale pour travailler avec des DataFrame et effectuer des analyses de données.
-python-dotenv : Permet de charger les variables d'environnement depuis un fichier .env.
-pandas-ta : Une bibliothèque pour les indicateurs techniques (par exemple, les moyennes mobiles), utile pour construire la stratégie de trading.
+    License
+    Ce projet est sous la licence MIT.
