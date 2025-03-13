@@ -21,6 +21,7 @@ Avant de commencer, assurez-vous d'avoir installé les dépendances nécessaires
    git clone https://github.com/vivienmcz/bot_trading.git
    cd bot_trading
 Créez un environnement virtuel (recommandé) :
+```
 
 ```bash
     python -m venv venv
@@ -43,7 +44,6 @@ Exécutez le bot pour commencer le trading :
 ```
 
 ```bash
-
     vivienmcz-bot_trading/
         ├── README.md               # Documentation du projet
         ├── requirements.txt        # Liste des dépendances
@@ -59,6 +59,7 @@ Exécutez le bot pour commencer le trading :
                 ├── strategy.py     # Stratégies de trading (indicateurs, signaux)
                 └── utils.py        # Utilitaires divers (connexion Binance, etc.)
 ```
+
     Auteurs
     Vivien M. (votre nom ici)
 
